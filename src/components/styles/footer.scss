@@ -1,0 +1,22 @@
+.piepagina {
+    background-color: var(--hospital-green);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+.piepagina img{
+    width: 75px;
+}
+
+footer {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 640px) {
+    
+}
