@@ -1,26 +1,49 @@
 .OrderItem {
-	display: grid;
-	grid-template-columns: auto 1fr auto auto;
+	display: flex;
+	flex-direction: column;
 	gap: 16px;
 	margin-bottom: 24px;
 	align-items: center;
+	border-width: 1px;
+    border-style: solid;
+    border-color: var(--very-light-pink);
+	border-radius: 4%;
+	background-color: white;
 }
-.OrderItem figure {
-	margin: 0;
+.OrderItem .close_icon {
+	margin-left: 70%; /* add some space to the right of the image */	
+	cursor: pointer; //Recomiendo agregar un pointer al icono de borrar del carrito
+	padding: 2%;
+	width: 30px;
+	height: 30px;
 }
 .OrderItem figure img {
-	width: 70px;
-	height: 70px;
 	border-radius: 20px;
 	object-fit: cover;
 }
 .OrderItem p:nth-child(2) {
+	margin-bottom: 0;
+	margin-top: 0;
 	color: var(--very-light-pink);
+	font-size: 160%;
+	height: 10%;
+	text-align: center;
 }
 .OrderItem p:nth-child(3) {
-	font-size: var(--md);
+	margin-top: 0;
+	height: 10%;
+	text-align: center;
+}
+.OrderItem p:nth-child(4) {/*Precio*/
+	margin-top: 0;
+	margin-bottom: 0;
+	height: auto;
+	text-align: center;
 	font-weight: bold;
 }
-.OrderItem img {
-	cursor: pointer; //Recomiendo agregar un pointer al icono de borrar del carrito
+.OrderItem p:nth-child(5) {
+	font-size: var(--md);
+	text-align: center;
+	width: 75%;
+	font-style: italic;
 }

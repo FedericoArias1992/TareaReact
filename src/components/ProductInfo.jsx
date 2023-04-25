@@ -1,18 +1,23 @@
 import React from 'react';
-import '../styles/OrderItem.scss';
-import icon_close from '@icons/icon_close.svg';
+import '@styles/OrderItem.scss';
+import icon_close from '@icons/icon_close.png';
 
-const OrderItem = () => {
+//pasamos el context para poder mostrar la info del producto en grande y encima de la pantalla al clickearlo
+
+
+const ProductInfo = ({product}) => {
+
 	return (
 		<div className="OrderItem">
+			<img src={icon_close} alt="close" className='close_icon'/>
+			<p>{product.title}</p>
 			<figure>
-				<img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
+				<img src={product.images[0]} alt={product.title} />
 			</figure>
-			<p>Bike</p>
-			<p>$30,00</p>
-			<img src={icon_close} alt="close" />
+			<p>{product.price}Bs.</p>
+			<p>{product.description}</p>
 		</div>
 	);
 }
 
-export default OrderItem;
+export default ProductInfo;

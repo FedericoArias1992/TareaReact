@@ -1,0 +1,43 @@
+.mobile-menu {
+    height: 880%;
+    width: 55%;
+    position: absolute;
+    top: 60px;  /*falta ajustar que las letras del menu esten mas a la izq y que el largo dependa del largo de la screan*/
+    left: 4px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.mobile-menu ul { /*Quita las viñetas que vienen por defecto*/
+    list-style: none;
+}
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+.email {
+    font-size: 12px;
+    font-weight: 300 !important; /*usamos el importar pq por especificidad el mobile-menu a: ya definia el font weight como bold*/
+}
+.mobile-menu ul:nth-child(3){ /*usamos la ultima lista para estilizarla de manera distinta*/
+    position: absolute; /*para mandar esa lista al fondo de la pantalla*/
+    bottom: 0;
+}
+.mobile-menu .menu-email {
+    font-size: var(--sm);
+    font-weight: 300;
+}
+.mobile-menu .cerrar-sesion { /*al usar esta especificidad evitamos usar el important de abajo*/
+    font-size: var(--sm);
+    color: var(--hospital-green);
+}
+/* .cerrar-sesion { */
+    /* color: var(--hospital-green) !important; */
+    /* font-size: 12px;} */

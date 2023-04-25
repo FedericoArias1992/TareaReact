@@ -6,6 +6,10 @@
 	height: 240px;
 	border-radius: 20px;
 	object-fit: cover;
+	cursor: pointer;
+}
+.ProductItem img:hover {
+	cursor: pointer;
 }
 .product-info {
 	display: flex;
@@ -33,6 +37,13 @@
 	margin-bottom: 0;
 	color: var(--very-light-pink);
 }
+.product-info figure:hover img {
+	border-radius: 50%;
+	box-shadow: 0 0 2px 1px var(--hospital-green),
+	0 0 4px 1px var(--hospital-green),
+	0 0 8px 1px var(--hospital-green);
+	cursor: pointer;
+  }
 @media (max-width: 640px) {
 	.cards-container {
 		grid-template-columns: repeat(auto-fill, 140px);
@@ -43,5 +54,6 @@
 	.ProductItem img {
 		width: 140px;
 		height: 140px;
+		cursor: pointer;
 	}
 }

@@ -8,7 +8,7 @@ import flechaImg from '@icons/flechita.svg';
 import {useContext} from 'react';
 import AppContext from '../context/AppContext';
 
-const MyOrder = () => {
+const MyOrder = ({ toggleOrders, setToggleOrders }) => { /*Pasamos como argumentos las props de Header.jsx - reto 3*/
 	const { state } = useContext(AppContext);
 	const sumTotal = () => {
 		const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
@@ -18,12 +18,15 @@ const MyOrder = () => {
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
+				<img src={flechaImg} alt="arrow" onClick={() => setToggleOrders(!toggleOrders)}/>
 				<p className="title">My order</p>
-				<img src={flechaImg} alt="arrow" />
 			</div>
 			<div className="my-order-content"> {/*abajo pasamos los items agregados al carrito a la seccion actual del menu de checkOut */}
-				{state.cart.map(product=> (<OrderItem product={product} key={`orderItem-${product.id}`} />))}
-				
+				<div className="cart-product-list"> {/*esta es la nueva clase para resolver el reto 2*/}
+    		        {state.cart.map((product) => (
+            		<OrderItem product={product} key={`orderItem-${product.id}`} />
+			        ))}
+		        </div>
 				<div className="order">
 					<p>
 						<span>Total</span>

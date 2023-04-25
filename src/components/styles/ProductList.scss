@@ -5,7 +5,13 @@
 	place-content: center;
 	margin: 3em 0 0 0;
 }
-
+.OrderItem {
+	position: absolute;
+	left: 33%;
+	top: 16%;
+	height: 90%;
+	width: 40%;
+}
 @media (max-width: 640px) {
 	.ProductList {
 		grid-template-columns: repeat(auto-fill, 140px);

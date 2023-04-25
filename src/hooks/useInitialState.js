@@ -28,10 +28,14 @@ const useInitialState = () => {	//creamos el estado y la inicializamos como el e
 					//eliminarlo cruzandolo con el item que recibo del payload
 		})
 	}
+	const isInCart = (productId) => { //reto 4
+		return state.cart.some(product => product.id === productId)
+	  }
 	return {
 		state,
 		addToCart,
-		removeFromCart //lo debemos importar en OrderItem.jsx pq ahí esta la cruz para borrar el item de la lista
+		removeFromCart, //lo debemos importar en OrderItem.jsx pq ahí esta la cruz para borrar el item de la lista
+		isInCart
 	}	
 }
 export default useInitialState;

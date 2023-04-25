@@ -13,16 +13,27 @@
 	top:60px;
 	bottom: auto;
 	border: 1px solid var(--hospital-green);
-	overflow-y: auto; /*Recomiendo agregar scroll*/
-	height: 300px;	  /*Recomiendo agregar scroll*/	
+}
+.cart-product-list {
+	max-height: 340px;
+	overflow-y: auto; /*Esto es para que se pueda hacer el scroll */	
+}
+.cart-product-list::-webkit-scrollbar {
+	display: none; /*Ocultamos el scrollbar*/
 }
 .title-container {
-	display: grid;
+	display: flex;
 }
 .title-container img {
-	transform: rotate(90deg);
-	margin-right: 14px;
+	transform: rotate(180deg);
+	margin-right: 10px;
 	align-items: right;
+}
+.title-container img:hover {
+	box-shadow: 0 0 2px 1px var(--hospital-green),
+	0 0 4px 1px var(--hospital-green),
+	0 0 8px 1px var(--hospital-green);
+	cursor: pointer;
 }
 .title {
 	font-size: var(--lg);
