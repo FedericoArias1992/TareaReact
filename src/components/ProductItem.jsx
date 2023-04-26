@@ -21,12 +21,19 @@ const ProductItem = ({ product }) => { //recibimos como argumento CADA producto 
 
 	//let x=product;
 	//console.log(x);
-	const [showProductInfo, setshowProductInfo] = useState(false); //para mostrar el product info cuando se clickea la foto
+	const [showProductInfo, setShowProductInfo] = useState(false);//para mostrar el product info cuando se clickea la foto
+	const handleProductClick = () => {
+		setShowProductInfo(true);
+	  };
+	
+	  const handleProductClose = () => {
+		setShowProductInfo(false);
+	  };
 
 	return (
 		<div className="ProductItem">
-			<img src={product.images[0]} alt={product.title} onClick={() => setshowProductInfo(!showProductInfo)} />
-			{ showProductInfo && <ProductInfo product={product} key={product.id} />}
+			<img src={product.images[0]} alt={product.title} onClick={handleProductClick} />
+			{ showProductInfo && <ProductInfo product={product} key={product.id} onClose={handleProductClose} />}
 			<div className="product-info">
 				<div>
 					<p>{product.price}Bs.</p>

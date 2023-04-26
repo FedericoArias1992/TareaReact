@@ -1,0 +1,49 @@
+.ProductInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 24px;
+	align-items: center;
+	border-width: 1px;
+    border-style: solid;
+    border-color: var(--very-light-pink);
+	border-radius: 4%;
+	background-color: white;
+}
+.ProductInfo .close_icon {
+	margin-left: 70%; /* add some space to the right of the image */	
+	cursor: pointer; //Recomiendo agregar un pointer al icono de borrar del carrito
+	padding: 2%;
+	width: 30px;
+	height: 30px;
+}
+.ProductInfo figure img {
+	border-radius: 20px;
+	object-fit: cover;
+}
+.ProductInfo p:nth-child(2) {
+	margin-bottom: 0;
+	margin-top: 0;
+	color: var(--very-light-pink);
+	font-size: 160%;
+	height: 10%;
+	text-align: center;
+}
+.ProductInfo p:nth-child(3) {
+	margin-top: 0;
+	height: 10%;
+	text-align: center;
+}
+.ProductInfo p:nth-child(4) {/*Precio*/
+	margin-top: 0;
+	margin-bottom: 0;
+	height: auto;
+	text-align: center;
+	font-weight: bold;
+}
+.ProductInfo p:nth-child(5) {
+	font-size: var(--md);
+	text-align: center;
+	width: 75%;
+	font-style: italic;
+}
